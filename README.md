@@ -20,7 +20,7 @@ THIS DATA CAN BE GOTTEN FROM [HERE]()
 
 ## **SOLUTIONS AND RESULTS**
 
-THIS CAN BE FOUND [HERE](PROJECT.md).
+THIS CAN BE FOUND [HERE](https://github.com/mhizshona/SQL-Deforestation-analysis-project/blob/main/project.md).
 
 ###3 okay okay
 
