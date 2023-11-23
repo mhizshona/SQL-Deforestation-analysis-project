@@ -14,14 +14,14 @@ ORDER BY COUNTRY_NAME;
 
 | countries_involved |
 | ------ |
-| Afghanistan  |
+| Afghanistan|
 |Albania  |
-Algeria|
+|Algeria|
 |American samoa
-Andorra  |
+|Andorra  |
 | Angola  |
 | Antigua and Barbuda |
-Argentina|
+|Argentina|
 | Armenia  |
 |Anuba|
 
