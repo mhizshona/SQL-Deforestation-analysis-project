@@ -5,42 +5,29 @@
 - USING SUBQUERIES
 
 ```sql
-SELECT TOP 10 country_code AS COUNTRIES_INVOLVED 
-FROM
-(SELECT DISTINCT country_code 
-FROM forest_area
-WHERE forest_area_sqkm IS NOT NULL
-) AS COUNTRY_COUNT;
-
- -- CTE
-
-WITH COUNTRY_COUNT 
-AS
-(SELECT DISTINCT country_code 
-FROM forest_area
-WHERE forest_area_sqkm IS NOT NULL
-) 
-SELECT TOP 10 country_code AS countries_involved
-FROM COUNTRY_COUNT ;
+SELECT DISTINCT TOP 10 COUNTRY_NAME 
+FROM REGIONS
+ORDER BY COUNTRY_NAME;
 ```
 
 #### __RESULT__
 
 | countries_involved |
 | ------ |
-| Aruba  |
 | Afghanistan  |
 |Albania  |
+Algeria|
+|American samoa
 Andorra  |
-| United Arab Emirates  |
-| Argentina |
-| Armenia  |
-| American Samoa  |
+| Angola  |
 | Antigua and Barbuda |
+Argentina|
+| Armenia  |
+|Anuba|
 
 #### __INSIGHTS__
 
-There are a total of 208 countris involved in deforestation.
+There are a total of 218 countris involved in deforestation with the top 10 displayed.
 
 ### 2.  Show the income groups of countries having total area ranging from 75,000 to 150,000 square meter?
 
@@ -53,22 +40,23 @@ FROM LAND_AREA LA
 JOIN FOREST_AREA FA ON LA.COUNTRY_CODE = FA.COUNTRY_CODE
 JOIN REGIONS R ON LA.COUNTRY_CODE = R.COUNTRY_CODE
 WHERE TOTAL_AREA_SQ_MI BETWEEN 75000 AND 150000 
-GROUP BY  R.COUNTRY_NAME, INCOME_GROUP, TOTAL_AREA_SQ_MI ;
+GROUP BY  R.COUNTRY_NAME, INCOME_GROUP, TOTAL_AREA_SQ_MI 
+ORDER BY SELECTED AREA DESC;
 ```
 #### __RESULT__
 
 | COUNTRY_NAME	| SELECTED AREA	 | INCOME_GROUP |
 |--------------|---------------|-------------|
-|Burkina Faso	| 105637.1	| Low income|
-|Belarus	| 78373.8	| Upper middle income |
-|Belarus	| 78369.9	| Upper middle income |
-|Belarus	| 78368	| Upper middle income |
-|Belarus	| 78342.9 | Upper middle income |
-|Belarus	| 78343.6	| Upper middle income |
-|Belarus	| 78316.6	| Upper middle income |
-|Belarus	| 78305	| Upper middle income |
-|Belarus	| 78312.7	| Upper middle income |
-|Belarus	| 78339.8	| Upper middle income |
+Zimbabwe |	149362.9|	Low income
+Norway|	141020.8|	High income
+Norway	|140974.1|	High income
+Japan	|140772.2|	High income
+Japan	|140756.8|	High income
+Japan	|140754.8|	High income
+Japan	|140752.9|	High income
+Japan	|140733.6|	High income
+Germany	|134888	|High income
+Germany	|134799.2|	High income
 
 #### __INSIGHTS__
 
