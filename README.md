@@ -22,7 +22,7 @@ THIS DATA CAN BE GOTTEN FROM [HERE]()
 
 THIS CAN BE FOUND [HERE](https://github.com/mhizshona/SQL-Deforestation-analysis-project/blob/main/project.md).
 
-###3 okay okay
+### okay okay
 
 ADDDING THIS HERE JUST CAUSE
 
